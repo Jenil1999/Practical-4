@@ -6,7 +6,6 @@ using TMPro;
 
 public class Accessories : MonoBehaviour
 {
-   
     public GameObject correctform;
     public GameObject notcorrectform;
     public GameObject notcorrectform1;
@@ -22,7 +21,6 @@ public class Accessories : MonoBehaviour
             Vector3 mousepos;
             mousepos = Input.mousePosition;
             mousepos = Camera.main.ScreenToWorldPoint(mousepos);
-
             transform.position = new Vector3(mousepos.x, mousepos.y, transform.position.z);
         }
         
@@ -39,7 +37,6 @@ public class Accessories : MonoBehaviour
             moving = true;
         }
     }
-
    
     private void OnMouseUp()
     {

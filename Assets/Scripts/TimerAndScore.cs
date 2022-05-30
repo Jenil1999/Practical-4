@@ -9,10 +9,12 @@ public class TimerAndScore : MonoBehaviour
     [SerializeField] Image TimerImage;
     [SerializeField] float PlayingTime = 30f;
     [SerializeField] TextMeshProUGUI ScoreCard;
-
     [SerializeField] Canvas Final;
+    [SerializeField] Canvas TimerField;
+    [SerializeField] TextMeshProUGUI ScoreCardForGameOver;
     [SerializeField] TextMeshProUGUI FinalScore;
-
+    public AudioSource Audio;
+    public Slider VolumeTracker;
     public static TimerAndScore Instance;
 
     private void Awake()
@@ -56,17 +58,20 @@ public class TimerAndScore : MonoBehaviour
                 {
                     FillTransaction = TimerValue / PlayingTime;
                 }
-
                 else
                 {
+                
                 TimerValue = PlayingTime;
-                }
+            }
 
-                if(TimerValue == 0)
-                {
+        if(TimerValue < 0.2)
+            {
                 Final.gameObject.SetActive(true);
-                }
-          //  Debug.Log(Mathf.RoundToInt(TimerValue));
+            }
+
+
+
+            // Debug.Log(Mathf.RoundToInt(TimerValue));
         }
     }
 
@@ -76,8 +81,13 @@ public class TimerAndScore : MonoBehaviour
         Score += AddPoint;
         Debug.Log("score"+Score);
         ScoreCard.text = Score.ToString();
+        ScoreCardForGameOver.text = Score.ToString();
     }
- 
+
+    public void Volume()
+    {
+        Audio.volume = VolumeTracker.value;
+    }
 
 }
 
