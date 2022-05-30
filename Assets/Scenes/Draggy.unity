@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 16874760}
   m_Layer: 0
   m_Name: pants
-  m_TagString: Tbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 46814360}
   m_Layer: 0
   m_Name: mango
-  m_TagString: Fbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 233037843}
   m_Layer: 5
   m_Name: Basket
-  m_TagString: Tbasket
+  m_TagString: Baskets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1205,7 @@ GameObject:
   - component: {fileID: 448974494}
   m_Layer: 0
   m_Name: smartphone
-  m_TagString: Ebasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 717065226}
   m_Layer: 0
   m_Name: burger
-  m_TagString: Fbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2093,7 +2093,7 @@ GameObject:
   - component: {fileID: 763454275}
   m_Layer: 0
   m_Name: apple
-  m_TagString: Fbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2302,7 +2302,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2902,7 +2902,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -3231,7 +3231,7 @@ GameObject:
   - component: {fileID: 1067736855}
   m_Layer: 0
   m_Name: cap
-  m_TagString: Tbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3379,7 +3379,7 @@ GameObject:
   - component: {fileID: 1142086375}
   m_Layer: 0
   m_Name: binocular
-  m_TagString: Tbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3738,14 +3738,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerImage: {fileID: 850426795}
-  PlayingTime: 20
-  ScoreCard: {fileID: 830454374}
-  Final: {fileID: 861495738}
+  PlayingTime: 400
   TimerField: {fileID: 1052042707}
+  ScoreCard: {fileID: 830454374}
   ScoreCardForGameOver: {fileID: 1164281639}
   FinalScore: {fileID: 1164281639}
+  Final: {fileID: 861495738}
   Audio: {fileID: 911910701}
   VolumeTracker: {fileID: 472817830}
+  Objects: 0
   FillTransaction: 1
 --- !u!1 &1234206568
 GameObject:
@@ -3761,7 +3762,7 @@ GameObject:
   - component: {fileID: 1234206572}
   m_Layer: 0
   m_Name: cart
-  m_TagString: Ebasket
+  m_TagString: Baskets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3888,7 +3889,7 @@ GameObject:
   - component: {fileID: 1269400856}
   m_Layer: 0
   m_Name: basket
-  m_TagString: Fbasket
+  m_TagString: Baskets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4015,7 +4016,7 @@ GameObject:
   - component: {fileID: 1286882069}
   m_Layer: 0
   m_Name: suitcase
-  m_TagString: Untagged
+  m_TagString: Baskets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4354,7 +4355,7 @@ GameObject:
   - component: {fileID: 1387369519}
   m_Layer: 0
   m_Name: backpack
-  m_TagString: Tbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4538,7 +4539,7 @@ GameObject:
   - component: {fileID: 1476553196}
   m_Layer: 0
   m_Name: headphones
-  m_TagString: Ebasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4686,7 +4687,7 @@ GameObject:
   - component: {fileID: 1512885116}
   m_Layer: 0
   m_Name: laptop
-  m_TagString: Ebasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4987,7 +4988,7 @@ GameObject:
   - component: {fileID: 1709872920}
   m_Layer: 0
   m_Name: hawaiian-shirt
-  m_TagString: Tbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5217,7 +5218,7 @@ GameObject:
   - component: {fileID: 1734787958}
   m_Layer: 0
   m_Name: watch
-  m_TagString: Ebasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5365,7 +5366,7 @@ GameObject:
   - component: {fileID: 1747229020}
   m_Layer: 0
   m_Name: karaoke
-  m_TagString: Ebasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5513,7 +5514,7 @@ GameObject:
   - component: {fileID: 1751465280}
   m_Layer: 0
   m_Name: orange
-  m_TagString: Fbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6210,7 +6211,7 @@ GameObject:
   - component: {fileID: 2044999416}
   m_Layer: 0
   m_Name: sandwich
-  m_TagString: Fbasket
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

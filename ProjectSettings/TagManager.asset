@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fbasket
-  - Ebasket
-  - Tbasket
+  - Objects
+  - Baskets
   layers:
   - Default
   - TransparentFX

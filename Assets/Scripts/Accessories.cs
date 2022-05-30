@@ -10,9 +10,13 @@ public class Accessories : MonoBehaviour
     public GameObject notcorrectform;
     public GameObject notcorrectform1;
     bool moving;
-    
 
     public GameManager.Category ObjType;
+
+    private void Start()
+    {
+        CountObjects();
+    }
 
     private void Update()
     {
@@ -26,7 +30,15 @@ public class Accessories : MonoBehaviour
         
     }
 
-   
+    void CountObjects()
+    {
+        if (CompareTag("Objects"))
+        {
+            TimerAndScore.Instance.CountObj();
+        }
+    }
+
+
 
     private void OnMouseDown()
     {
@@ -37,7 +49,7 @@ public class Accessories : MonoBehaviour
             moving = true;
         }
     }
-   
+    
     private void OnMouseUp()
     {
         moving = false;
@@ -45,7 +57,6 @@ public class Accessories : MonoBehaviour
         if (Mathf.Abs(transform.position.x - correctform.transform.position.x) <= 0.6f && Mathf.Abs(transform.position.y - correctform.transform.position.y) <= 0.6f)
         {
             Destroy(gameObject);
-
         }
 
         else if (Mathf.Abs(transform.position.x - notcorrectform.transform.position.x) <= 0.6f && Mathf.Abs(transform.position.y - notcorrectform.transform.position.y) <= 0.6f)

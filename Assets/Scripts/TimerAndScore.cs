@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class TimerAndScore : MonoBehaviour
 {
+    [Header("Timer")]
     [SerializeField] Image TimerImage;
     [SerializeField] float PlayingTime = 30f;
-    [SerializeField] TextMeshProUGUI ScoreCard;
-    [SerializeField] Canvas Final;
     [SerializeField] Canvas TimerField;
+    [Header("Score")]
+    [SerializeField] TextMeshProUGUI ScoreCard;
     [SerializeField] TextMeshProUGUI ScoreCardForGameOver;
     [SerializeField] TextMeshProUGUI FinalScore;
+    [SerializeField] Canvas Final;
+    [Header("Audio")]
     public AudioSource Audio;
     public Slider VolumeTracker;
     public static TimerAndScore Instance;
+    [Header("ObjectsCount")]
+    public int Objects;
 
     private void Awake()
     {
@@ -42,12 +47,9 @@ public class TimerAndScore : MonoBehaviour
         TimerImage.fillAmount = FillTransaction;
     }
 
-
     // Open  /*  For TImer....
     //........................
     //........................
-
-
     void UpdateTimer()   
     {
         {
@@ -68,9 +70,6 @@ public class TimerAndScore : MonoBehaviour
             {
                 Final.gameObject.SetActive(true);
             }
-
-
-
             // Debug.Log(Mathf.RoundToInt(TimerValue));
         }
     }
@@ -89,6 +88,19 @@ public class TimerAndScore : MonoBehaviour
         Audio.volume = VolumeTracker.value;
     }
 
+    public void CountObj()
+    {
+        Objects++;
+    }
+
+    public void MinusObjects()
+    {
+        Objects--;
+        if (Objects <= 0)
+        {
+            Final.gameObject.SetActive(true);
+        }
+    }
 }
 
 

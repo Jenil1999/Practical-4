@@ -13,11 +13,8 @@ public class BasketModel : MonoBehaviour
     [SerializeField] int PointOnWrong = 0;
 
     [SerializeField] TextMeshProUGUI CountField;
-   
+    Accessories accessories;
     AudioManager audioManager;
-
-    /*[SerializeField] TextMeshProUGUI eCountField;
-    [SerializeField] TextMeshProUGUI tCountField;*/
 
     private void Awake()
     {
@@ -26,10 +23,10 @@ public class BasketModel : MonoBehaviour
     private void Start()
     {
         GetComponent<BoxCollider2D>();
+        accessories = GetComponent<Accessories>();
         CountField.text = count.ToString();
-        
         count = 0;
-        
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,8 +42,7 @@ public class BasketModel : MonoBehaviour
                 TimerAndScore.Instance.AddScore(PointPerPick);
                 audioManager.PlayCorrectClip();
                 Debug.Log("correct");
-                
-
+                TimerAndScore.Instance.MinusObjects();
             }
             else
             {
@@ -54,6 +50,7 @@ public class BasketModel : MonoBehaviour
                 audioManager.PlayWrongClip();
                 Debug.Log("Incorrect");
                 Debug.Log("fAILED");
+                TimerAndScore.Instance.MinusObjects();
             }
 
             collision.gameObject.SetActive(false);
